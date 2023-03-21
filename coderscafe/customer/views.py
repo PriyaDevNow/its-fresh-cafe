@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+from django.core.mail import send_mail
 from .models import MenuItem, Category, OrderModel
 
 # Create your views here.
@@ -72,9 +73,22 @@ class Order(View):
             street=street,
             city=city,
             state=state,
-            zip_code=zip_code
+            zip_code=zip
         )
         order.items.add(*item.ids)
+
+        # After everything is done, send confirmation emailto the user
+        body = ('Thank you for your order!  Your food is being made and will be delivered soon!\n'
+        f'Your total: {price}\n'
+        'Thank you again for your order!')
+
+        send_mail(
+            'Thank You For Your Order!',
+            body,
+            'example@example.com',
+            [email],
+            fail_silently=False
+        )
 
         context = {
             'items': order_items['items'],
