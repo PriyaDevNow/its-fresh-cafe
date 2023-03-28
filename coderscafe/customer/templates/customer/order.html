@@ -4,9 +4,10 @@
 <div class="container mb-5">
     <div class="row justify-content-center mt-1">
         <div class="col-md-12 col-sm-12 p-4">
-            <form method="post">
+            <form method="POST">
                 {% csrf_token %}
                 <div class="pt-5">
+                    <h1><strong>APPETIZERS</strong></h1>
                     {% for app in appetizers %}
                     <div class="row">
                         <div class="col-md-2 col-sm-12">
@@ -18,7 +19,7 @@
                                     <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
                                     <label class="form-check-label">{{ app.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ app.price }}</p>
+                                <p class style="font-weight-bold pl-5">£{{ app.price }}</p>
                             </div>
                             <p>{{ app.description }}</p>
                         </div>
@@ -28,6 +29,7 @@
                 </div>
 
                 <div class="pt-5">
+                    <h1><strong>ENTREES</strong></h1>
                     {% for entre in entres %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
@@ -40,7 +42,7 @@
                                         value="{{ entre.pk }}">
                                     <label class="form-check-label">{{ entre.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ entre.price }}</p>
+                                <p class="font-weight-bold pl-5">£{{ entre.price }}</p>
                             </div>
                             <p>{{ entre.description }}</p>
                         </div>
@@ -50,6 +52,7 @@
                 </div>
 
                 <div class="pt-5">
+                    <h1><strong>DESSERTS</strong></h1>
                     {% for dessert in desserts %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
@@ -62,7 +65,7 @@
                                         value="{{ dessert.pk }}">
                                     <label class="form-check-label">{{ dessert.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ dessert.price }}</p>
+                                <p class="font-weight-bold pl-5">£{{ dessert.price }}</p>
                             </div>
                             <p>{{ dessert.description }}</p>
                         </div>
@@ -72,6 +75,7 @@
                 </div>
 
                 <div class="pt-5">
+                    <h1><strong>DRINKS</strong></h1>
                     {% for drink in drinks %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
@@ -84,7 +88,7 @@
                                         value="{{ drink.pk }}">
                                     <label class="form-check-label">{{ drink.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ drink.price }}</p>
+                                <p class="font-weight-bold pl-5">£{{ drink.price }}</p>
                             </div>
                             <p>{{ drink.description }}</p>
                         </div>
@@ -124,33 +128,36 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group pt-3">
                             <label for="name">Zip Code</label>
-                            <input required class="form-control" type="text" placeholder="94117" name="zip" />
+                            <input required class="form-control" type="int" placeholder="94117" name="zip" />
                         </div>
 
                     </div>
                 </div>
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitModal">
+                <div class="pt-3"> 
+                    <button type="button" class="btn btn-dark" data-mdb-toggle="modal"
+                    data-mdb-target="#submitModal">
                     Submit Order!
-                </button>
+                    </button>
+                </div>
 
                 <!--button class="btn btn-dark mt-5">Place Order!</button>--->
 
                 <!-- Modal -->
-                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog"
-                    aria-labelledby="submitModalLabel" aria-hidden="true">
+                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="submitModalLabel">Submit Your Order!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-light" data-dismiss="modal">Go Back</button>
+                                <button type="button" class="btn btn-light" data-mdb-dismiss="modal">Go Back</button>
                                 <button type="submit" class="btn btn-dark">Place Order!</button>
                             </div>
                         </div>
