@@ -36,17 +36,22 @@
                 </p>
                 {% endif %}
             </p>
-                {% if order.is_shipped%}
-                <p><i style="color:green;" class="fas fa-check"></i>
-                    <span class="pl-2">Order Has Been Shipped!</span>
-                </p>
-                {% else %}
-                <form method="POST">
-                    {% csrf_token%}
-                    <button type="submit" class="btn btn-outline-success">Mark as Shipped</button>
-                </form>
-                {% endif %}
-
+            {% if order.is_shipped%}
+            <p><i style="color:green;" class="fas fa-check"></i>
+                <span class="pl-2">Order Has Been Shipped!</span>
+            </p>
+            {% else %}
+            <form method="POST">
+                {% csrf_token%}
+                <button type="submit" class="btn btn-outline-success">Mark as Shipped</button>
+            </form>
+            {% endif %}
+            <p>
+                <a href='{% url "dashboard" %}'>
+                    <h5>Go Back To Dashboard
+                        <i class='fa-solid fa-arrow-left ms-3 pt-5'></i></h5>
+                </a>
+            </p>
         </div>
 
     </div>

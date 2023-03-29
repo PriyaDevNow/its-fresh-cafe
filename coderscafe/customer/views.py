@@ -54,10 +54,10 @@ class Order(View):
         for item in items:
             menu_item = MenuItem.objects.get(pk__contains=int(item))
             item_data = {
-            'id': menu_item.pk,
-            'name': menu_item.name,
-            'price': menu_item.price
-        }
+                'id': menu_item.pk,
+                'name': menu_item.name,
+                'price': menu_item.price
+            }
 
             order_items['items'].append(item_data)
 
@@ -68,16 +68,17 @@ class Order(View):
             price += item['price']
             item_ids.append(item['id'])
 
-            order = OrderModel.objects.create(
-                price=price,
-                name=name,
-                email=email,
-                street=street,
-                city=city,
-                state=state,
-                zip_code=zip_code
-            )
-            order.items.add(*item_ids)
+        order = OrderModel.objects.create(
+            price=price,
+            name=name,
+            email=email,
+            street=street,
+            city=city,
+            state=state,
+            zip_code=zip_code
+        )
+        
+        order.items.add(*item_ids)
 
         # After everything is done, send confirmation email to the user
         body = ('Thank you for your order!  Your food is being made and will be delivered soon!\n'
@@ -95,8 +96,6 @@ class Order(View):
         context = {
             'items': order_items['items'],
             'price': price
-
-
         }
 
         return redirect('order-confirmation', pk=order.pk)
