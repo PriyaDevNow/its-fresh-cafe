@@ -11,3 +11,23 @@ body {
     height: 800px;
     
 }
+
+/* index */
+
+#order_box {
+    padding: 1em;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+   
+}
+
+#name_box {
+    background: rgba(208, 210, 105, 0.8);
+}
+
+#fresh_menu {
+    background-color: rgba(208, 210, 105, 0.4);
+}

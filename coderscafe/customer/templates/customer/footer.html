@@ -1,18 +1,56 @@
-<footer class="page-footer font-small fixed-bottom" style="background-color: #8c4b37; color:#D0D269;">
-    <div class="footer-copyright text-center py-3" style="color:#D0D269;">&copy; 2023 Copyright:
-        <a href="{% url 'index' %}" style="color:#D0D269;"></a>It's Fresh!</a>
-        <div>
-            <h3>Find us</h3>
-            <p><i class="fa-regular fa-location-dot"></i>3 Primrose Gardens</p>
-            <p>Hampstead Heath, VE12 G12</p>
+<!-- Footer -->
+
+<footer class="page-footer font-small" id="footer" style="background-color: #07331b; color:#D0D269;">
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row pt-2">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-2">
+
+                <!-- Content -->
+                <div>
+                    <h3 class="text-uppercase font-weight-bold pt-3">Find us</h3>
+                    <p><i class="fa-sharp fa-solid fa-location-pin"></i>  3 Primrose Gardens, Hampstead Heath, VE1 G13</p>
+                    <p><i class="fa-solid fa-phone"></i>  07777 102030</i></p>
+                </div>
+
+
             </div>
-            <div>
-            <h3>Follow us
-                <p><i class="fa-brands fa-instagram"></i> </p>
-            </h3>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-1">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mb-md-0 mb-2">
+
+                <!-- Content -->
+                <div>
+                    <h3 class="text-uppercase font-weight-bold pt-3">Follow us
+                        <p><i class="fa-brands fa-instagram"></i> </p>
+                        <p><i class="fa-brands fa-tiktok"></i></p>
+                    </h3>
+                </div>
+
+
+            </div>
+            <!-- Grid column -->
+
         </div>
-        <a class="ml-3" href="{% url 'dashboard' %}" style="color:#1D5113;">Cafe Login</a>
-    
-        
+        <!-- Grid row -->
+
     </div>
+    <!-- Footer Text -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-1" style="color:#D0D269;">&copy; 2023 Copyright:
+        <a href="{% url 'index' %}" style="color:#D0D269;"></a>It's Fresh!</a>
+        <div><a class="ml-3" href="{% url 'dashboard' %}" style="color:#8c4b37; font-size: larger;">STAFF LOGIN</a></div>
+
+    </div>
+
+    <!-- Copyright -->
+
 </footer>
+<!-- Footer -->

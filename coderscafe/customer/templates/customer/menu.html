@@ -1,16 +1,16 @@
 {% extends 'customer/base.html' %}
 
 {% block content %}
-<div class="container">
-    <div class="row justify-content-center mt-5">
+<div class="container" id="fresh_menu" style="color: #1d5113; background:rgba(208, 210, 105, 0.7)">
+    <div class="row justify-content-center pt-3">
         <div class="col-md-6 col-sm-12 text-center">
             <h1>What's On Our Menu?</h1>
         </div>
     </div>
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center mt-3">
         <div class="col-md-8 col-sm-12 text-center">
             <form method="GET" action="{% url 'menu-search' %}">
-                <div class="med-form mt-0 active-cyan-2 pb-5">
+                <div class="med-form mt-0 active-cyan-2 pb-5" style="color: #1d5113">
                     <input class="form-control" name="q" type="text" placeholder="Search Our Menu" aria-label="Search" value="{{  request.GET.q  }}">
                 </div>
             </form>

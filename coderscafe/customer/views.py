@@ -21,17 +21,17 @@ class Order(View):
     def get(self, request, *arg, **kwargs):
         
         # get every item from each category
-        appetizers = MenuItem.objects.filter(category__name__contains='Appetizer')
-        entres = MenuItem.objects.filter(category__name__contains='Entre')
+        salads = MenuItem.objects.filter(category__name__contains='Salad')
+        mains = MenuItem.objects.filter(category__name__contains='Main')
         desserts = MenuItem.objects.filter(category__name__contains='Dessert')
-        drinks = MenuItem.objects.filter(category__name__contains='Drink')
+        smoothies = MenuItem.objects.filter(category__name__contains='Smoothie')
 
         # pass into context
         context = {
-            'appetizers': appetizers,
-            'entres': entres,
+            'salads': salads,
+            'mains': mains,
             'desserts': desserts,
-            'drinks': drinks,
+            'smoothies': smoothies,
         }
 
         # render the template

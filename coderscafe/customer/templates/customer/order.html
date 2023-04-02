@@ -1,27 +1,27 @@
 {% extends 'customer/base.html' %}
 
 {% block content %}
-<div class="container mb-5">
+<div class="container mb-0 p-0" style="color: #1d5113; background:rgba(208, 210, 105, 0.7)">
     <div class="row justify-content-center mt-1">
         <div class="col-md-12 col-sm-12 p-4">
             <form method="POST">
                 {% csrf_token %}
                 <div class="pt-5">
-                    <h1><strong>APPETIZERS</strong></h1>
-                    {% for app in appetizers %}
+                    <h1><strong>SALADS</strong></h1>
+                    {% for salad in salads %}
                     <div class="row">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ app.image.url }}" width="150" height="100" />
+                            <img class="rounded" src="{{ salad.image.url }}" width="150" height="100" />
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
                                     <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
-                                    <label class="form-check-label">{{ app.name }}</label>
+                                    <label class="form-check-label">{{ salad.name }}</label>
                                 </div>
-                                <p class style="font-weight-bold pl-5">£{{ app.price }}</p>
+                                <p class style="font-weight-bold pl-5">  £ {{ salad.price }}</p>
                             </div>
-                            <p>{{ app.description }}</p>
+                            <p>{{ salad.description }}</p>
                         </div>
                     </div>
                     <hr />
@@ -29,22 +29,22 @@
                 </div>
 
                 <div class="pt-5">
-                    <h1><strong>ENTREES</strong></h1>
-                    {% for entre in entres %}
+                    <h1><strong>MAINS</strong></h1>
+                    {% for main in mains %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ entre.image.url }}" width="150" height="100" />
+                            <img class="rounded" src="{{ main.image.url }}" width="150" height="100" />
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
                                     <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ entre.pk }}">
-                                    <label class="form-check-label">{{ entre.name }}</label>
+                                        value="{{ main.pk }}">
+                                    <label class="form-check-label">{{ main.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">£{{ entre.price }}</p>
+                                <p class="font-weight-bold pl-5">  £{{ main.price }}</p>
                             </div>
-                            <p>{{ entre.description }}</p>
+                            <p>{{ main.description }}</p>
                         </div>
                     </div>
                     <hr />
@@ -75,22 +75,22 @@
                 </div>
 
                 <div class="pt-5">
-                    <h1><strong>DRINKS</strong></h1>
-                    {% for drink in drinks %}
+                    <h1><strong>SMOOTHIES</strong></h1>
+                    {% for smoothie in smoothies %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ drink.image.url }}" width="150" height="100" />
+                            <img class="rounded" src="{{ smoothie.image.url }}" width="150" height="100" />
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
                                     <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ drink.pk }}">
-                                    <label class="form-check-label">{{ drink.name }}</label>
+                                        value="{{ smoothie.pk }}">
+                                    <label class="form-check-label">{{ smoothie.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">£{{ drink.price }}</p>
+                                <p class="font-weight-bold pl-5">£{{ smoothie.price }}</p>
                             </div>
-                            <p>{{ drink.description }}</p>
+                            <p>{{ smoothie.description }}</p>
                         </div>
                     </div>
                     <hr />
@@ -136,7 +136,7 @@
 
                 <!-- Button trigger modal -->
                 <div class="pt-3"> 
-                    <button type="button" class="btn btn-dark" data-mdb-toggle="modal"
+                    <button type="button" class="btn" style="background-color: #8c4b37; color:#D0D269; font-size: larger;" data-mdb-toggle="modal"
                     data-mdb-target="#submitModal">
                     Submit Order!
                     </button>
