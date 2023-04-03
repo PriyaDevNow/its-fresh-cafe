@@ -16,7 +16,7 @@
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ salad.pk }}">
                                     <label class="form-check-label">{{ salad.name }}</label>
                                 </div>
                                 <p class style="font-weight-bold pl-5">  £ {{ salad.price }}</p>
@@ -136,7 +136,7 @@
 
                 <!-- Button trigger modal -->
                 <div class="pt-3"> 
-                    <button type="button" class="btn" style="background-color: #8c4b37; color:#D0D269; font-size: larger;" data-mdb-toggle="modal"
+                    <button type="button" class="btn" style="background-color: #8c4b37; color:#D0D269;" data-mdb-toggle="modal"
                     data-mdb-target="#submitModal">
                     Submit Order!
                     </button>
@@ -151,14 +151,14 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="submitModalLabel">Submit Your Order!</h5>
-                                <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" style="background-color: #d0d269; color:#8c4b37;" data-mdb-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-light" data-mdb-dismiss="modal">Go Back</button>
-                                <button type="submit" class="btn btn-dark">Place Order!</button>
+                                <button type="button" class="btn" style="background-color: #d0d269; color:#8c4b37;" data-mdb-dismiss="modal">Go Back</button>
+                                <button type="submit" class="btn" style="background-color: #8c4b37; color:#D0D269;">Place Order!</button>
                             </div>
                         </div>
                     </div>

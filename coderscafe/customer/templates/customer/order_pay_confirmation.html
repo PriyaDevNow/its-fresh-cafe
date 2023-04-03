@@ -1,12 +1,14 @@
 {% extends 'customer/base.html' %}
 
 {% block content %}
-<div class="container mb-5">
-    <div class="row justify-content-center mt-1">
+
+<div class="container-fluid mb-0" style="background: rgba(208, 210, 105, 0.65); color:#1d5113;">
+    <div class="row g-0 justify-content-center mt-0">
         <div class="col-md-5 col-sm-12 p-4 text-center">
             <h1>Payment Submitted!</h1>
-            <a href="{% url 'index'%}">Go to the homepage</a>
+            <a href="{% url 'index'%}" style="color:#8c4b37;">Go to the homepage</a>
         </div>
     </div>
 </div>
+
 {% endblock content %}

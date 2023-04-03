@@ -1,54 +1,108 @@
 {% extends 'customer/base.html' %}
 
 {% block content %}
+{% load static %}
 
-<div class="container mb-0" style="color: #1d5113; background:rgba(208, 210, 105, 0.7)">
-    <div class="row justify-content-center mt-0">
-        <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
-            <h1>About Us!</h1>
-            <p>It's Fresh! is a pioneering award winning takeaway built on three pillars.</p>
-        </div>
+<div class="container g-0 p-0 mt-3" id="about-us" style="color: #1d5113; background:rgba(208, 210, 105, 0.7); width:100%">
+  <div class="row justify-content-center mt-0">
+    <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center justify-content-center">
+      <h1>About Us</h1>
+      <p>It's Fresh! is a pioneering award winning vegetarian takeaway built on three pillars.</p>
     </div>
-    <div class="row justify-content-center mt-1 mb-1">
-        <div class="card col-md-5 col-sm-12 offset-md-1 p-4 text-center">
+  </div>
+
+  <!--- Start Card 1 -->
+  <div class="container-fluid card mb-3"
+    style="max-width:900px; color: #1d5113; background:rgba(140,	75,	55, 0.2);">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'customer/eating-outside-friends-2-1200x800.jpg' %}" style="width:300px; height:200px; border: radius 20px;" alt="Happy people eating outdoors"
+        class="img-fluid rounded-start"/>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">PEOPLE</h5>
+          <div class="card-text">
+            <p>To serve hearty nutritious vegetarian meals to people and educate them on food.</p>
+
+            <p>We provide the calories* and macronutrient constituents of each dish as well as its carbon rating.</p>
+
+            <p>We also run nutrition wellness programs for those seeking to lose weight or maintain a healthy weight.
+            </p>
+            <p>
+              <small class="text-muted">* Calorie count is provided for a 200g portion of each dish.</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--- End Card 1 -->
+
+  <!--- Start Card 2 -->
+  <div class="container-fluid card mb-3 justify-content-center"
+    style="max-width:900px; color: #1d5113; background:rgba(140,	75,	55, 0.2);">
+    <div class="row g-0 ">
+      <div class="col-md-4">
+        <img src="{% static 'customer/pexels-cup-of-couple-6963680.jpg' %}" style="width:300px; height:200px; border: radius 20px;" alt="Happy people dancing with globe"
+          class="img-fluid rounded-start" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">PLANET</h5>
+          <div class="card-text">
+            <p>24% of global CO2 emmissions come from food, mainly from meat farming. A vegetarian diet reduces this
+              carbon* footprint by 73%.</p>
+
+            <p>Being vegetarian for just 1 day a week (52 days/year) can save nearly 100 kilograms of CO2 per year!</p>
+
+            <p>Each of our dishes is given a carbon rating (as devised by My Emissions - see https://myemissions.green)
+              where A is very low to E being the highest rate of carbon intensity.</p> 
+            <p>Our chefs create dishes which have a maximum of C rating so you are contributing to the global effort to reduce adverse climate change by carefully choosing
+              the food you eat.</p>
+              <p>Our food packaging is made of recyclable cardboard and our delivery partner is Just Eat.</p>
+            <small class="text-muted">* Carbon footprint is the total climate impact of an activity or item: from its creation,
+              transportation and use to its destruction or wastage.</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--- End Card 2 -->
+
+  <!--- Start Card 3 -->
+
+  <div class="container-fluid card mb-3 justify-content-center"
+    style="max-width:900px; color: #1d5113; background:rgba(140,	75,	55, 0.2);">
+    <div class="row g-0 ">
+      <div class="col-md-4">
+        <img src="{% static 'customer/colorful-food3_resized.jpg' %}" style="width:300px; height:200px; border: radius 20px;" alt="Hands holding plate"
+          class="img-fluid rounded-start" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">PLATE</h5>
+          <div class="card-text">
+            <p>Each dish is colourful and influenced by different parts of the world with a vegetarian* twist.</p>
+            <p>It is freshly prepared in our kitchen using only seasonal local ingredients and delivered within 20 minutes to your table.</p>
+            <p>Each dish carries calorie and carbon rating.</p>
             
-            <img src="/Logo_It's_Fresh!.png" alt="It's Fresh logo" class="justify-content-center"  style="width:200px;height:200px;">
-            <h3></h3>
-            <p>cras sed ligula, ornare pulvinar mattis suscipit Tristique Taciti velit ullamcorper cubilia. Duis
-                eu. Blandit mauris. Non cum, accumsan eleifend ipsum aptent sodales primis cum accumsan. Aliquet mattis,
-                leo mi aptent. Placerat in gravida justo felis mi cursus mauris semper eu pede imperdiet hac. Feugiat id
-                etiam quam, suspendisse phasellus. Nulla quis pellentesque cras consequat. Ullamcorper feugiat
-                adipiscing proin enim curabitur aenean metus sollicitudin netus eget scelerisque facilisis luctus
-                mauris. Senectus auctor luctus dis potenti vestibulum volutpat adipiscing habitant ullamcorper malesuada
-                iaculis. Nulla luctus porttitor pulvinar vestibulum condimentum ipsum aliquet. Nascetur integer facilisi
-                sociis purus gravida nullam quisque vestibulum pharetra nostra pede felis rhoncus rhoncus litora fusce
-                tincidunt volutpat ornare dolor lacinia facilisi morbi turpis sociis, placerat platea tristique leo, ut
-                aliquet. Placerat quisque montes, mollis ridiculus est mus aenean ligula fusce.</p>
+          </div>
+          <p class="card-text">
+            <small class="text-muted">*  Created by our team of artisan home cooks.</small>
+          </p>
         </div>
-        <div class="card col-md-5 col-sm-12 offset-md-1 p-4 text-center">
-            <p>Sit nullam parturient eu sagittis curabitur. Lectus scelerisque amet praesent accumsan fames orci purus
-                aliquet. Litora vel pulvinar nascetur aptent dolor sapien morbi leo placerat vivamus enim fames felis
-                torquent imperdiet est commodo. Quis hendrerit. Nisi ac risus sagittis porta nulla felis ultrices. Proin
-                nunc enim metus nam cum. Velit augue urna consectetuer justo quis metus sit litora ultrices, mus
-                condimentum feugiat eros congue, ante pellentesque eget. Semper congue. Massa nunc varius donec orci
-                iaculis malesuada hac viverra donec varius nostra, convallis volutpat fames non integer at dignissim
-                nulla ultrices ultrices placerat metus porttitor vitae, taciti sagittis sed erat aliquet metus metus
-                odio varius diam cursus. Congue nostra penatibus dis eleifend taciti luctus aenean dignissim suscipit
-                aliquet taciti sollicitudin diam quisque vestibulum suscipit. Dictum per litora turpis ornare ligula
-                feugiat aliquet. Congue Donec cras in donec ipsum. Leo sit, laoreet felis.</p>
-        </div>
-        <div class="card col-md-5 col-sm-12 offset-md-1 p-4 text-center">
-            <p>Sagittis conubia imperdiet eros dapibus, nunc auctor ultricies accumsan lobortis justo libero maecenas
-                sit Odio nisi parturient inceptos, amet lacinia risus nostra. Nisl libero ipsum malesuada etiam sociosqu
-                elementum quam nam aliquam dis. Non. Condimentum urna, cursus facilisis libero cubilia nam consectetuer,
-                habitant litora. Morbi tempus. Porttitor adipiscing tortor. Rhoncus nec habitant odio orci, augue dolor
-                nullam pellentesque vehicula libero hymenaeos nunc mattis blandit lacinia. Class proin iaculis mollis
-                ligula consectetuer taciti. Metus senectus. Tortor nisl semper mattis. Mauris ut nibh quis tempor congue
-                dictumst morbi nunc vulputate viverra mi eget dictumst curae; dis congue magna rutrum ligula risus magna
-                suscipit natoque consequat lacinia natoque arcu. Magnis etiam taciti vulputate dignissim vel fusce quam
-                cras orci leo torquent mattis non ipsum pede nascetur viverra eros proin.</p>
-        </div>
+      </div>
     </div>
+  </div>
+
+  <!--- End Card 3 -->
+
+
+
 </div>
 
 {% endblock content %}

@@ -1,12 +1,12 @@
 {% extends 'customer/base.html' %}
 
 {% block content %}
-<div class="container mb-5">
+<div class="container mb-5" style="background: rgba(208, 210, 105, 0.6); color:#1d5113;">
     <div class="row justify-content-center mt-1">
         <div class="col-md-5 col-sm-12 p-4 text-center">
             <h1>Order Submitted!</h1>
             <p>You should receive a confirmation email soon.</p>
-            <a href="{% url 'index' %}">Go to the homepage</a>
+            <a href="{% url 'index' %}" style="color:#8c4b37;">Go to the homepage</a>
         </div>
     </div>
 
@@ -17,7 +17,7 @@
             <p>{{ item.name }} <span class="pl-3">£{{ item.price }}</span></p>
             {% endfor %}
 
-            <p class="font-weight-bold pt-4">Total: £{{ price }}</p>
+            <p class="font-weight-bolder pt-4"><emphasis>TOTAL: £{{ price }}</emphasis></p>
         </div>
     </div>
     <div class="row justify-content-center pb-2 pt-5">

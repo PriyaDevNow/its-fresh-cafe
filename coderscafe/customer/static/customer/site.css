@@ -1,6 +1,13 @@
 /* General Website Style rules */
 body {
     font-family: 'Bubblegum Sans', Sans-Serif, cursive;
+    background-color:rgba(208, 210, 105, 0.8);
+}
+
+
+#about-us-card {
+    color: #1d5113; 
+    background-color:rgba(140, 75,	55, 0.4);
 }
 
 #front-page {
@@ -29,5 +36,5 @@ body {
 }
 
 #fresh_menu {
-    background-color: rgba(208, 210, 105, 0.4);
+    background-color: rgba(208, 210, 105, 0.7);
 }
