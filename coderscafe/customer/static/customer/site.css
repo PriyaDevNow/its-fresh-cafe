@@ -2,6 +2,7 @@
 body {
     font-family: 'Bubblegum Sans', Sans-Serif, cursive;
     background-color:rgba(208, 210, 105, 0.8);
+    color:rgba(140, 75, 55, 1)
 }
 
 
@@ -11,7 +12,7 @@ body {
 }
 
 #front-page {
-    background: url('background_photo.jpeg') no-repeat;
+    background: url('background5.jpg') no-repeat;
     background-color: #d0d269;
     background-size: cover;
     width: 100%;
