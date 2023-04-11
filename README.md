@@ -468,15 +468,15 @@ This project was built with the Django Framework. Django is a Python based frame
 - Superuser (site admin) accesses the project via logging into Django admin panel with a superuser id and password. The page appears as [here](coderscafe/assets/images/DjangoPanel.png)
 - A superuser "admin" was created for this project to manage the admin panel.
 
-- On the Admin Panel, as Superuser I have full access to CRUD functionality so I can view, create, edit and delete the following Entities:
+- On the Admin Panel, as Superuser I have full access to CRUD functionality so I can view, create, edit and delete the following [Entities](coderscafe/assets/images/DjangoEntities.png):
   - Category
   - Menu item
   - Order models
   - Users - as Admin I can also give certain permissions to specific Staff.
-[Adhere](coderscafe/assets/images/DjangoEntities.png)
 
-[Back to top ⇧](#content)
 ----
+[Back to top ⇧](#content)
+
 
 ## Technologies Used
 
@@ -493,8 +493,9 @@ This project was built with the Django Framework. Django is a Python based frame
 
 ### Frameworks - Libraries - Programs Used
 
-* [Django](https://www.djangoproject.com/) was used as the framework for the back-end logic of the project. Django enables rapid and secure development.
-* [Bootstrap](https://getbootstrap.com/)- Used version 4.3 to style the website, add responsiveness and interactivity.
+* [Django](https://www.djangoproject.com/) - as the framework for the back-end logic of the project. Django enables rapid and secure development.
+* [UserPersona](https://userpersona.dev/) - to develop user stories for the project
+* [MDB](https://mdbootstrap.com/docs/b4/) - Bootstrap version 4 for styling the website, add responsiveness and interactivity
 * [Pillow](https://pypi.org/project/Pillow/) - for image processing capabilities 
 * [Git](https://git-scm.com/)- for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
 * [GitHub](https://github.com/)- used to store the project's code after being pushed from Git
@@ -506,7 +507,7 @@ This project was built with the Django Framework. Django is a Python based frame
 * [Lucidchart](https://bit.ly/3nidrjl) - a diagram tool used to create a wireframes for this project
 * [ERDplus](https://erdplus.com/) - to create the database model in this project. 
 * [Trello](https://trello.com/b/u1DVA6qR/kanban-template) - to vcreat the Kanban board to monitor the progress of this project
-- [Amiresponsive](https://ui.dev/amiresponsive) - used to see responsive design throughout the process
+- [Amiresponsive](https://ui.dev/amiresponsive) - used to see responsive design 
 
 <!--->
 * [PostgreSQL](https://www.postgresql.org/)- Database used through heroku.
@@ -520,13 +521,12 @@ This project was built with the Django Framework. Django is a Python based frame
 ## Testing
 
 ### Validation
-I used the following validation tools to validate CSS and PYTHON codes. HTML could not be validated as it uses the Djabgo framework. Below the link of TESTING.md file, which includes all validation results.  
+I used the following validation tools to validate CSS and PYTHON codes. HTML could not be validated as it uses the Django framework.   
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ### Manual Testing
 Testing has taken place continuously throughout the development of the project. Each view was tested regularly. When the outcome was not as expected, debugging took place at that point. An exhaustive list of features were checked on different devices and browsers. They were performed and their screenshots can be found in the features section on how the distinct features render. All clickable links redirect to the correct pages.
-
 
 ### Behavioural Driven Development (BDD)
 BDD results on TESTING.md file:- [Testing Results Here](TESTING.md)
@@ -539,117 +539,72 @@ Due to lack of time for the completion of this project, there were no automated 
 #### All Pages:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Home page | When the "It's Fresh" logo on the navigation bar is clicked, the browser redirects the user to the home page and the "active" styling appears on the home button | PASS
-Menu page |When the "menu" button on the navigation bar is clicked, the browser redirects the user to the menu page and the "active" styling appears on the menu button.  | PASS
-Contact page | When the "contact" button in the navigation bar is clicked, the browser redirects the user to the contact page and the "active" styling appears on the contact button. | PASS
-Table bookingpage | When the "Table booking" button in the navigation bar is clicked, the browser redirects the user to the Table booking page and the "active" styling appears on the Table booking button.| PASS
-My booking page | When the "My booking" button in the navigation bar is clicked, the browser redirects the user to the My booking page and the "active" styling appears on the My booking button. | PASS
-Edit profile page | Checked foreground information is not distracted by backgrounds| PASS
-Register page |  When the "Register" button in the navigation bar is clicked, the browser redirects the user to the Register page and the "active" styling appears on the Register button. | PASS
+Home page | When the "It's Fresh" logo on the far left of the navigation bar is clicked, the browser redirects the user to the home page | PASS
+Menu page |When the "takeaway menu" link in the navigation bar is clicked, the browser redirects the user to the menu page.  | PASS
+About page | When the "about" link in the navigation bar is clicked, the browser redirects the user to the About page. | PASS
+Place an Order button | When the "Place an Order" button in the far right of the navigation bar is clicked, the browser redirects the user to the Order page with menu and checkbox.  | PASS
+Place an Order button | When the "Place an Order" button in the center of the Home page is clicked, the browser redirects the user to the Order page with menu and checkbox.  | PASS
 Foreground & background colour | Checked foreground information is not distracted by background color or images | PASS
 Text | Checked that all fonts and colours used are consistent. | PASS
 
-#### Footer
+#### Footer:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Facebook | When the Facebook icon is clicked, a new tab will open and the user will be redirected to the Facebook website. | PASS
-Instagram | When the Instagram icon is clicked, a new tab will open and the user will be redirected to the Instagram website. | PASS
+Social icons | When the href in the anchor tag for the respective icons is added, a new tab will open and the user will be redirected to the Insttagram and Tiktok sites of the takeaway respectively.  This has been disabled in the current site. | PASS
+Location pin | When the location pin is clicked it does not open into Google Map as this is a fictional address. Extra code would need to be writtent to facilitate opening of Google map in a modal | PASS
 
-#### Home
+
+#### Home:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
 Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views..| PASS
 Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-Carrousel | The links in the carousel are functional and take the user to the correct pages. | PASS
-Carrousel login | The information displayed in the carousel is dynamic and depends on the user's login status. | PASS
 
-Lightouse:
-![light1](images/lighthouse/light1.png)
 
-#### Menu page
+#### Menu page:
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+
+
+#### About page:
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+
+
+#### Place an Order page:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
 Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
 Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Create | Customer can create order by checking dishes and completing form. | PASS
+Edit | Customer can go back and check order before submitting. | PASS 
+Personal Details form | Checked the form submits only when all required fields are filled out. | PASS
+Read | Checked that Customer order is correctly translated into the order summary after Order is submitted by Customer. | PASS
+Paypal Button | Checked Customer option to pay by Paypal works | PASS
 
-Lightouse:
-![light2](images/lighthouse/light2.png)
 
-#### Contact page
+#### Dashboard:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Map | The map asset is displayed correctly, without any pixelation or stretched images, and is responsive on all devices. | PASS
-Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
-Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-
-Lightouse:
-![light3](images/lighthouse/light3.png)
-
-#### Sign Up page
-TEST            | OUTCOME                          | PASS / FAIL  
---------------- | -------------------------------- | ---------------
+Login |The Staff Login on Home Page is secure and password controlled. | PASS
+Logout | No button provided due to lack of development time so workaround is for Staff logged in to logout using Django Panel.  | FAIL
 Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
 Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
-Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-Register form | Checked the form submits only when all required fields are filled out. | PASS
-Sign in link | Checked the sign-in link redirects to the sign-in page. | PASS
+Information | Checked the only permitted Staff can login to see Dashboard.  Checked that information submitted by Customer on the order is picked up.  Checked that Staff can mark order as Shipped.  Checked that the order of orders shownn on Dashboard is on time basis.  | PASS
 
-Lightouse:
-![light7](images/lighthouse/light7.png)
 
-#### Log in page
+#### Backend - Django Panel: 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Create, Read, Edit, Delete | The Menu items and Orders can be managed on CRUD basis in the Django panel.  All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
 Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
-Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-Sign in form | Checked the form submits only when all required fields are filled out. | PASS
-Signup link | Checked the signup link redirects to the signup page. | PASS
-
-Lightouse:
-![light8](images/lighthouse/light8.png)
-
-#### Book table page
-TEST            | OUTCOME                          | PASS / FAIL  
---------------- | -------------------------------- | ---------------
-Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
-Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
-Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-Form | Checked the form submits only when all required fields are filled out. | PASS
-Date picker | When a date is selected, all reservations made for that day are displayed.| PASS
-
-Lightouse:
-![light4](images/lighthouse/light4.png)
-
-#### My bookings page
-TEST            | OUTCOME                          | PASS / FAIL  
---------------- | -------------------------------- | ---------------
-Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
-Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
-Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-Dropdown | Clicking on a reservation activates the dropdown, showing the edit and delete button. | PASS
-Edit |Clicking on the edit button takes you to the edit page. | PASS
-Delete |When the delete button is clicked, a modal appears to confirm the action before it is executed. | PASS
-No reservation |A button linking to the book table page is present and functional.| PASS
-
-Lightouse:
-![light6](images/lighthouse/light6.png)
-
-#### Edit table page
-TEST            | OUTCOME                          | PASS / FAIL  
---------------- | -------------------------------- | ---------------
-Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
-Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
-Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
-Form | Checked the form submits only when all required fields are filled out. | PASS
-
-Lightouse:
-![light5](images/lighthouse/light5.png)
-
-
-
+Login Logout |The Django panel use is secure and password controlled. | PASS
 
 
 ----
@@ -658,27 +613,31 @@ Lightouse:
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| In navbar, the menu item destination dropdown was not populating.| Create destination_list view that return context (destination_list) then add `'blog.views.destinations_list'` in templates section in settings.py file |
+| In Menu Page, only 9 menu items could be rendered.  | The views.py file has the code for Menu items which was changed to 
+                                                        `'for item in items:
+                                                            menu_item = MenuItem.objects.get(pk__exact=int(item))'` |
 | Post image was not rendering on post_detail page(Issue only for mobile screens). | Remove class 'd-none' from post_detail page |
-| Alert messages was not disappeare after setTimeOut(2000)<br><details><summary>Alert Code</summary><img src="assets/alert-js.jpg"></details> | Copy code from bootstrap alert and customize with forEach <br><details><summary>New Alert Code</summary><img src="assets/new-alert-js.jpg"></details>|
-| Destination dropdown was again not populating. | Remove script scr 'bootstrap.min.js' because there is already 'bootstrap.bundle.min.js' |
-| Automated test was not working because of postgres database | Connect with local db.sqlite3 while running unit test<br><details><summary>Override database for unit test</summary><img src="assets/local-bd-for-unittest.jpg"></details>  |
 
 
-| **Unfix Bug** |
+
+| **Unfixed Bug** |
 | ----------- | 
-| When a logged in user adds a new post, the post slug should automatically be created from the post title. But the slug field is empty in the database. Slug is a required field when admin publishes a draft post, so here admin manually filled the slug field during publishing. Below is the screenshot from the post model in admin panel and view for Add Post.<br><details><summary>Empty slug screenshot</summary><img src="assets/empty-slug.jpg"></details><details><summary>Add Post View</summary><img src="assets/addPostView.jpg"></details> 
+| The Home page has white space on the right which I have not been able to get rid off despite Googling and StackOverflowing this matter.  I think it is something to do with css and guttering but I have not been able to succesfully deal with this.  
 
 ----
 
 ## Future Implementation
 
-* Automated testing for views functions 
-* Adding and displaying replies below corresponding comments on our blog
+* Cancellation of order by Customer
+* API owith Just Eat so Customer knows exactly when their order will be delivered
+* Blog page and client testimonials
+* Staff Logout for Dashboard 
+* Automated testing
+* Deployment as a fully functional working website
 
 [Back to top ⇧](#content)
 
-
+<!--->
 ## Deployment
 
 ### 1. Creating the Django Project
@@ -692,7 +651,7 @@ Lightouse:
 * Create superuser to mnage the admin of the site `python3 manage.py createsuperuser` putting in admin name and password credentials.
 * Once done start building out the apps.
 * 
-    <!---->
+   
 ### 2. Create your Heroku app
 * Navigate to [Heroku](https://id.heroku.com).
 * Create a Heroku account by entering your email address and a password (or login if you have one already).
@@ -716,7 +675,7 @@ Lightouse:
 
 
 
-* Commit and push the code to the GitHub Repository.?????
+* Commit and push the code to the GitHub Repository.
 
 ### 5. Heroku Deployment: 
 * Click Deploy tab in Heroku.
@@ -740,22 +699,23 @@ In the IDE:
 # Credits
 
 ## Code
-- The basic set up of the website was done by strictly following the steps as described in Code Institue Full Stack Frameworks module - Django walkthrough project `"I Think Therefore I Blog"`.
-- Followed the project of one of my friend who is also a CI student (Roshana Vakeel): https://github.com/RoshnaVakkeel/Little_Learners_Lab_Logs/blob/main/logs/forms.py 
-- Another project link I found from Linkdin, also CI's student (Laura Mayock): https://github.com/LauraMayock/The-happy-reader
-- [The Newsbox](https://github.com/rashdogg74/newsbox86)- One of the project shared by my cohort facilitator on Slack. 
+- [Legion Script](https://www.youtube.com/watch?v=msmtduZfAHo) - the set up of this website follows the food delivery Django project as taught by Legion Script which I found very helpful both in its logical walk through and coding method
+ 
 
 ## Learning Resources
-- Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.
-- Youtube videos by [Codemy](https://www.youtube.com/watch?v=6-XXvUENY_8&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=5)
+- Code Institutes Full Stack Framework Module.
 - [W3CSchool](https://www.w3schools.com/django/)
 - [Django Documentation](https://docs.djangoproject.com/en/3.2/ref/models/fields/#field-types)(For different quaries while doing project. For example query about models, fields, form widgets, auth and many more)
-- Other open source to understand and solve following types of error : UnboundedLocalError, MultivalueDictKeyError,  ProgrammingError, InvalidCursorName etc.
-- Youtube videos [The Dumbfounds](https://www.youtube.com/playlist?list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM) for automated testing.
+- Stackoverflow - had answers to many of my quesries.
+- Youtube videos [The Dumbfounds](https://www.youtube.com/playlist?list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM) for automated testing to be done in the future.
 
 ## Content and Media
 
-Mostly images and post content are taken from the website https://www.holidify.com/ and https://www.incredible-india.org/. Some images are taken from [Pexels](https://www.pexels.com/).
+The menu images are mine.  
+
+The rest of the images were taken from royalty free sites like [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/).  The hero image is 
+
+Compression of images to help with performace was done using [Tiny PNG editor](https://tinypng.com/).
 
 ----
 
