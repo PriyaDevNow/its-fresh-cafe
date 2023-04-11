@@ -89,7 +89,7 @@ Please find my Kanban Board with my Customer user stories in progress as at 23 M
 
 ## Epics and User Stories
 
-The following Epics were created which were further developed into 18 User Stories, based on the User Personas below
+The following Epics were created which were further developed into 21 User Stories, based on the User Personas below
 <details closed>
 
 ![Persona 1](coderscafe/assets/images/UserPersona1.png)
@@ -146,14 +146,14 @@ Epic Goals for Staff -
 #### Related User Stories:
 - Dashboard system
     - Order management
+        - As **Staff** I can **access daily customer orders all in one place** so I can **easily track daily revenues and orders status**
         - As **Staff** I can **login and logout easily** so I can **see the Dashboard**
         - As **Staff** I can **check the status of any order** so I can **do any necessary update or delete actions for customer orders**
         - As **Staff** I can **view the customer details** so I can **decide whether an unpaid order should be made and delivered for cash**
-        - As **Staff** I can **access daily customer orders all in one place** so I can **easily track daily revenues and orders status**
-         
+       
           
 ### Epic 3 - Website Management
-Epic Goals for Site Admin -
+Epic Goals for Site Admin / Superuser -
 * Easy registration of an account
 * Easy Sign Up, Sign in and Sign Out
 * Easy access to Create, Read, Update and Delete (CRUD) features upon signing in
@@ -162,12 +162,14 @@ Epic Goals for Site Admin -
 
 #### Related User Stories:
 - Management
+    - Site management
+        - As a **Superuser** I can **ensure all different parts of the website run smoothly with no bugs** so that **all users have a great experience** 
     - Menu management
-        - As a **Site admin** I can **create, read, update and delete menu items** so that **I can keep the menu up-to-date** 
+        - As a **Superuse** I can **create, read, update and delete menu items** so that **I can keep the menu up-to-date** 
     - Managing Customer orders
-        - As a **Site admin** I can **create, read, update and delete customer orders** so that **I can manage the entire customer order cycle** 
+        - As a **Superuser** I can **create, read, update and delete customer orders** so that **I can manage the entire customer order cycle** 
     - Staff authentication and authorisation
-        - As a **Site admin** I can **authorise staff to perform specific functions** so that **I can keep control of staff activities** 
+        - As a **Superuser** I can **authorise staff to perform specific functions** so that **I can keep control of staff activities** 
 
 
 ## Tasks
@@ -205,9 +207,9 @@ The tasks that I have done during the development phase of the website were carr
 **Creation of Project in GitPod**
 
 - Create the django project with `pip3 install 'django<4'`. Check details in [deployment-section](#deployment)
-
-- Deploying app to Heroku - Details in [deployment](#deployment) section <<<<<<>>>>>>
-
+<!--->
+- Deploying app to Heroku - Details in [deployment](#deployment) section 
+<!-->
 - Create Database Models
 	- Set up models.py file in "Customer" directory
 
@@ -242,7 +244,7 @@ The tasks that I have done during the development phase of the website were carr
 
 ## Structure
 
-The structure of the website was limited to 3 pages, populated with essential information.  However, the interactve nature of the website - with apps for Customer and Staff respectively - was facilitated by individual smaller html pages.  
+The structure of the website was limited to 3 pages, populated with essential information.  However, the interactive nature of the website - with apps for Customer and Staff respectively - was facilitated by individual smaller html pages.  
 
 ## Skeleton
 
@@ -463,36 +465,15 @@ This project was built with the Django Framework. Django is a Python based frame
 
 ## Admin Panel
 
-- Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as [here](coderscafe/assets/images/DjangoPanel.png)
+- Superuser (site admin) accesses the project via logging into Django admin panel with a superuser id and password. The page appears as [here](coderscafe/assets/images/DjangoPanel.png)
 - A superuser "admin" was created for this project to manage the admin panel.
 
-- On the Admin Panel, as Admin I have full access to CRUD functionality so I can view, create, edit and delete the following Entities:
+- On the Admin Panel, as Superuser I have full access to CRUD functionality so I can view, create, edit and delete the following Entities:
   - Category
   - Menu item
   - Order models
   - Users - as Admin I can also give certain permissions to specific Staff.
 [Adhere](coderscafe/assets/images/DjangoEntities.png)
-
-### Admin 'Post' Model Management
-
-- On selecting Blog "Post", a list of blog posts is displayed with its title, slug, status, created_on and author name. Admin can select the post and edit or delete its data.
-- When a blog post is submitted by a user, its status is set to Draft by default.
-- When the status is set to Publish on Admin Approval, the post starts appearing in the website.
-
-The admin site for post model appears as shown [here](assets/features/admin-panel-post-model.jpg).
-
-### Admin 'Comment' Model Management
-
-- Upon selecting the Blog "Comment" model, a list of comments on a post is displayed with the username, comment body, post title, status and created_on. Admin can select the comment and edit or delete its data.
-- When a comment is submitted by a user, it requires approval from an admin in order to publish it on the comments section.
-
-The admin site for comment model appears as shown [here](assets/features/admin-panel-comment-model.jpg).
-
-### Admin 'Destination' Model Management
-
-- On selecting the Blog "Destination" model, a list of destinations for the blog post is displayed with title, slug and excerpt fields. Only Admin can add, edit or delete any destination data.
-
-The admin site for destination model appears as shown [here](assets/features/admin-panel-destination-model.jpg).
 
 [Back to top ⇧](#content)
 ----
@@ -507,27 +488,31 @@ The admin site for destination model appears as shown [here](assets/features/adm
 
 ### Django Packages
 
-* [Gunicorn](https://gunicorn.org/)- As the server for Heroku.
-* [Cloudinary](https://cloudinary.com/)- Was used to host the static files and media for the site.
-* [Dj_database_url](https://pypi.org/project/dj-database-url/)- To parse the database URL from the environment variables in Heroku.
-* [Psycopg2](https://pypi.org/project/psycopg2/)- As an adaptor for Python and PostgreSQL databases.
-* [Summernote](https://summernote.org/)- As a text editor.
 * [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)- For authentication, registration, account management.
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- To style the forms.
 
 ### Frameworks - Libraries - Programs Used
 
 * [Django](https://www.djangoproject.com/) was used as the framework for the back-end logic of the project. Django enables rapid and secure development.
-* [Bootstrap](https://getbootstrap.com/)- Used to style the website, add responsiveness and interactivity.
-* [Git](https://git-scm.com/)- Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
-* [GitHub](https://github.com/)- Used to store the project's code after being pushed from Git.
-* [Heroku](https://id.heroku.com)- Used to deploy the live project.
+* [Bootstrap](https://getbootstrap.com/)- Used version 4.3 to style the website, add responsiveness and interactivity.
+* [Pillow](https://pypi.org/project/Pillow/) - for image processing capabilities 
+* [Git](https://git-scm.com/)- for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+* [GitHub](https://github.com/)- used to store the project's code after being pushed from Git
+* [Gitpod](https://www.gitpod.io/) - used as development environment
+* [SQLLite](https://sqlite.org/index.html) - database engine
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) -  used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated
+* [Google Fonts](https://fonts.google.com/) - for the Bubblegum font
+* [Font Awesome](https://fontawesome.com/) - to add icons for aesthetic and UX purposes.
+* [Lucidchart](https://bit.ly/3nidrjl) - a diagram tool used to create a wireframes for this project
+* [ERDplus](https://erdplus.com/) - to create the database model in this project. 
+* [Trello](https://trello.com/b/u1DVA6qR/kanban-template) - to vcreat the Kanban board to monitor the progress of this project
+- [Amiresponsive](https://ui.dev/amiresponsive) - used to see responsive design throughout the process
+
+<!--->
 * [PostgreSQL](https://www.postgresql.org/)- Database used through heroku.
 * [Balsamiq](https://balsamiq.com/)- To build the wireframes for the project.
-* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
-* [Google Fonts:](https://fonts.google.com/) used for the Bubblegum font
-* [Font Awesome:](https://fontawesome.com/) was used to add icons for aesthetic and UX purposes.
-
+* [Heroku](https://id.heroku.com)- Used to deploy the live project.
+<!--->
 -----
 
 [Back to top ⇧](#content)
@@ -540,21 +525,22 @@ I used the following validation tools to validate CSS and PYTHON codes. HTML cou
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ### Manual Testing
-Testing has taken place continuously throughout the development of the project. Each view was tested regularly. When the outcome was not as expected, debugging took place at that point. An exhaustive list of features were checked on different devices and browsers. They were performed and their scrrenshots can be found in the features section on how the distinct features render. All clickable links redirect to the correct pages.
+Testing has taken place continuously throughout the development of the project. Each view was tested regularly. When the outcome was not as expected, debugging took place at that point. An exhaustive list of features were checked on different devices and browsers. They were performed and their screenshots can be found in the features section on how the distinct features render. All clickable links redirect to the correct pages.
 
-- Link for TESTING.md file:- [Testing Results Here](TESTING.md)
 
-### Test Driven Development
+### Behavioural Driven Development (BDD)
+BDD results on TESTING.md file:- [Testing Results Here](TESTING.md)
 
-Due to lack of time, there were no automated tests formulated in the test_forms.py. 
+### Test Driven Development (TDD)
+Due to lack of time for the completion of this project, there were no automated tests formulated in the test_forms.py. 
 
 ### Manual testing
 
 #### All Pages:
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Home page | When the "home" button in the navigation bar is clicked, the browser redirects the user to the home page and the "active" styling appears on the home button | PASS
-Menu page |When the "menu" button in the navigation bar is clicked, the browser redirects the user to the menu page and the "active" styling appears on the menu button.  | PASS
+Home page | When the "It's Fresh" logo on the navigation bar is clicked, the browser redirects the user to the home page and the "active" styling appears on the home button | PASS
+Menu page |When the "menu" button on the navigation bar is clicked, the browser redirects the user to the menu page and the "active" styling appears on the menu button.  | PASS
 Contact page | When the "contact" button in the navigation bar is clicked, the browser redirects the user to the contact page and the "active" styling appears on the contact button. | PASS
 Table bookingpage | When the "Table booking" button in the navigation bar is clicked, the browser redirects the user to the Table booking page and the "active" styling appears on the Table booking button.| PASS
 My booking page | When the "My booking" button in the navigation bar is clicked, the browser redirects the user to the My booking page and the "active" styling appears on the My booking button. | PASS
@@ -706,8 +692,8 @@ Lightouse:
 * Create superuser to mnage the admin of the site `python3 manage.py createsuperuser` putting in admin name and password credentials.
 * Once done start building out the apps.
 * 
-
-<<<<>>>>>  ### 2. Create your Heroku app
+    <!---->
+### 2. Create your Heroku app
 * Navigate to [Heroku](https://id.heroku.com).
 * Create a Heroku account by entering your email address and a password (or login if you have one already).
 * Activate the account through the authentication email sent to your email account.
@@ -746,7 +732,7 @@ In the IDE:
 * In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
-
+<!---->
 ----
 
 [Back to top](#content)
