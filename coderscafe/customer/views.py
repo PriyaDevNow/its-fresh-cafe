@@ -19,7 +19,7 @@ class About(View):
 
 class Order(View):
     def get(self, request, *arg, **kwargs):
-        
+      
         # get every item from each category
         salads = MenuItem.objects.filter(category__name__contains='Salad')
         mains = MenuItem.objects.filter(category__name__contains='Main')
@@ -130,7 +130,7 @@ class OrderPayConfirmation(View):
 
 class Menu(View):
     def get(self, request, *args, **kwargs):
-        menu_items=MenuItem.objects.all()
+        menu_items = MenuItem.objects.all()
 
         context = {
             'menu_items': menu_items
